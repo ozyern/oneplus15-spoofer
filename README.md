@@ -94,7 +94,7 @@ Expected key values:
 
 ## License
 
-MIT © 2025 Ozyern (@reimagine). See [LICENSE](LICENSE).
+MIT © 2026 . See [LICENSE](LICENSE).
 
 ## Disclaimer
 
