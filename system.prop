@@ -1,0 +1,73 @@
+# ============================================================
+# Rapchick Engine — OnePlus 15 EU (CPH2747) Device Spoof
+# Android 16 | SukiSU Ultra | Author: Ozyern (@reimagine)
+# ============================================================
+
+# --- Core product ---
+ro.product.brand=OnePlus
+ro.product.manufacturer=OnePlus
+ro.product.name=CPH2747
+ro.product.device=OP5CE1L1
+ro.product.model=CPH2747
+ro.product.marketname=OnePlus 15
+
+# --- System partition ---
+ro.product.system.brand=OnePlus
+ro.product.system.manufacturer=OnePlus
+ro.product.system.name=CPH2747
+ro.product.system.device=OP5CE1L1
+ro.product.system.model=CPH2747
+
+# --- Vendor partition ---
+ro.product.vendor.brand=OnePlus
+ro.product.vendor.manufacturer=OnePlus
+ro.product.vendor.name=CPH2747
+ro.product.vendor.device=OP5CE1L1
+ro.product.vendor.model=CPH2747
+
+# --- ODM partition ---
+ro.product.odm.brand=OnePlus
+ro.product.odm.manufacturer=OnePlus
+ro.product.odm.name=CPH2747
+ro.product.odm.device=OP5CE1L1
+ro.product.odm.model=CPH2747
+
+# --- Product partition ---
+ro.product.product.brand=OnePlus
+ro.product.product.manufacturer=OnePlus
+ro.product.product.name=CPH2747
+ro.product.product.device=OP5CE1L1
+ro.product.product.model=CPH2747
+
+# --- Attestation props (Play integrity) ---
+ro.product.brand_for_attestation=OnePlus
+ro.product.device_for_attestation=OP5CE1L1
+ro.product.manufacturer_for_attestation=OnePlus
+ro.product.model_for_attestation=CPH2747
+ro.product.name_for_attestation=CPH2747
+
+# --- Build ---
+ro.build.product=OP5CE1L1
+ro.build.brand=OnePlus
+ro.build.manufacturer=OnePlus
+ro.build.tags=release-keys
+ro.build.type=user
+
+# --- Android 16 ---
+ro.build.version.release=16
+ro.build.version.sdk=36
+ro.build.version.security_patch=2025-06-05
+
+# --- Fingerprints ---
+ro.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.system.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.vendor.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.product.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.odm.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+
+# --- OxygenOS 16 ---
+ro.vendor.oplus.version=CPH2747_16.0.0.250610
+ro.oplus.version=CPH2747_16.0.0.250610
+ro.oplus.regionmark=EU
+
+ro.product.characteristics=phone
