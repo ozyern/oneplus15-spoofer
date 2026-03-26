@@ -1,4 +1,4 @@
-# Rapchick Engine — OnePlus 15 EU Spoof
+# OnePlus 15 EU Spoof
 
 <p align="center">
   <img src="https://img.shields.io/badge/SukiSU%20Ultra-Compatible-red?style=for-the-badge"/>
