@@ -1,101 +1,56 @@
-# OnePlus 15 EU Spoof
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Android-16-green?style=for-the-badge&logo=android"/>
-  <img src="https://img.shields.io/badge/Target-CPH2747-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Region-EU-lightgrey?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/By-Ozyern-black?style=for-the-badge"/>
-</p>
+# SpoofasOnePlus15
 
-Property-spoofing module that makes the device report itself as **OnePlus 15 EU (CPH2747)** on **Android 16 / OxygenOS 16**.
+**An open-source Android module that spoofs your device as OnePlus 15 EU (CPH2747EEA)**  
+Built on the Rapchick Engine · Compatible with KernelSU / SukiSU Ultra / Magisk
 
-Part of the **Rapchick Engine** project by [@ozyern](https://github.com/ozyern).
+![Version](https://img.shields.io/badge/version-v1.1-blue)
+![Android](https://img.shields.io/badge/android-16-green)
+![License](https://img.shields.io/badge/license-MIT-orange)
 
-## Spoof Profile
+</div>
 
-| Property | Value |
-|---|---|
-| Model | `CPH2747` |
-| Device codename | `OP5CE1L1` |
-| Market name | `OnePlus 15` |
-| Brand / Manufacturer | `OnePlus` |
-| Android | `16` (SDK `36`) |
-| Security patch | `2025-06-05` |
-| Build fingerprint | `OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys` |
-| OxygenOS version props | `CPH2747_16.0.0.250610` |
-| Region mark | `EU` |
+---
 
-## Requirements
+## Features
 
-- Rooted device with a module manager that supports this package format
-- Android 16 base ROM
-- Recommended test target: OxygenOS-based ROMs
+- Spoofs device identity to **OnePlus 15 EU (CPH2747EEA)** across all partitions
+- Updates build fingerprint for Play Integrity compatibility
+- Preserves system security patch level (no override)
+- **Flagship performance tuning** — reports SM8750 / 16 GB RAM class to apps
+- Dalvik/ART heap tuned for reduced GC pressure
+- OPlus perf mode + HyperCooling + QTI bservice enabled
+- Lightweight, minimal, clean module structure
 
 ## Installation
 
-1. Download the latest zip from [Releases](../../releases).
-2. Open your root module manager.
-3. Install the zip as a module.
-4. Reboot.
+1. Download the latest zip from [Releases](../../releases)
+2. Flash via **KernelSU**, **SukiSU Ultra**, or **Magisk**
+3. Reboot
+4. Done
 
-## Verification
+## Compatibility
 
-Run:
+| Root Solution | Supported |
+|---|---|
+| KernelSU | ✅ |
+| SukiSU Ultra | ✅ |
+| Magisk | ✅ |
 
-```bash
-adb shell getprop ro.product.model
-adb shell getprop ro.product.marketname
-adb shell getprop ro.build.version.release
-adb shell getprop ro.build.fingerprint
-adb shell getprop ro.oplus.regionmark
-```
+Tested on OxygenOS 16 / ColorOS 16 ports · Android 16 · SM8350
 
-Expected key values:
+## Notes
 
-- `ro.product.model=CPH2747`
-- `ro.product.marketname=OnePlus 15`
-- `ro.build.version.release=16`
-- `ro.oplus.regionmark=EU`
+- Intended for compatibility testing and app unlock purposes
+- Some apps may still verify hardware-level attestation
+- Use at your own risk
 
-## How It Works
+## Credits
 
-- `system.prop`: sets baseline identity props during early property loading.
-- `service.sh`: waits for boot completion, then applies a second `resetprop` pass to override late-init resets.
-- `system/etc/permissions/com.oneplus.software.xml`: exposes OnePlus software feature flags used by some apps.
-
-`persist.*` props and `ro.debuggable` are intentionally not forced at runtime to avoid stability issues.
-
-## Project Structure
-
-```text
-.
-├── module.prop
-├── system.prop
-├── service.sh
-├── customize.sh
-├── META-INF/
-│   └── com/google/android/
-│       ├── update-binary
-│       └── updater-script
-└── system/
-    └── etc/
-        └── permissions/
-            └── com.oneplus.software.xml
-```
-
-## Troubleshooting
-
-- Props do not stick after boot:
-  - Reboot once more and verify again.
-  - Check for conflicts with other prop-spoof modules.
-- Bootloop after flashing:
-  - Remove the module from recovery or safe mode.
-  - Ensure your environment supports this module packaging and scripts.
+- Built by [@ozyern](https://github.com/ozyern) · Rapchick Engine
+- Android modding community & testers
 
 ## License
 
-MIT © 2026 . See [LICENSE](LICENSE).
-
-## Disclaimer
-
-This module only changes software-reported properties. It does not modify hardware, modem/baseband, or bootloader. Use at your own risk.
+MIT License — see [LICENSE](LICENSE) for details.

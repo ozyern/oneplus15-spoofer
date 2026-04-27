@@ -1,50 +1,51 @@
 # ============================================================
-# Rapchick Engine — OnePlus 15 EU (CPH2747) Device Spoof
+# Rapchick Engine — OnePlus 15 EU (CPH2747EEA) Device Spoof
 # Android 16 | SukiSU Ultra | Author: Ozyern (@reimagine)
+# v1.1 — EU model ID, system-default security patch, perf tuning
 # ============================================================
 
 # --- Core product ---
 ro.product.brand=OnePlus
 ro.product.manufacturer=OnePlus
-ro.product.name=CPH2747
+ro.product.name=CPH2747EEA
 ro.product.device=OP5CE1L1
-ro.product.model=CPH2747
+ro.product.model=CPH2747EEA
 ro.product.marketname=OnePlus 15
 
 # --- System partition ---
 ro.product.system.brand=OnePlus
 ro.product.system.manufacturer=OnePlus
-ro.product.system.name=CPH2747
+ro.product.system.name=CPH2747EEA
 ro.product.system.device=OP5CE1L1
-ro.product.system.model=CPH2747
+ro.product.system.model=CPH2747EEA
 
 # --- Vendor partition ---
 ro.product.vendor.brand=OnePlus
 ro.product.vendor.manufacturer=OnePlus
-ro.product.vendor.name=CPH2747
+ro.product.vendor.name=CPH2747EEA
 ro.product.vendor.device=OP5CE1L1
-ro.product.vendor.model=CPH2747
+ro.product.vendor.model=CPH2747EEA
 
 # --- ODM partition ---
 ro.product.odm.brand=OnePlus
 ro.product.odm.manufacturer=OnePlus
-ro.product.odm.name=CPH2747
+ro.product.odm.name=CPH2747EEA
 ro.product.odm.device=OP5CE1L1
-ro.product.odm.model=CPH2747
+ro.product.odm.model=CPH2747EEA
 
 # --- Product partition ---
 ro.product.product.brand=OnePlus
 ro.product.product.manufacturer=OnePlus
-ro.product.product.name=CPH2747
+ro.product.product.name=CPH2747EEA
 ro.product.product.device=OP5CE1L1
-ro.product.product.model=CPH2747
+ro.product.product.model=CPH2747EEA
 
 # --- Attestation props (Play integrity) ---
 ro.product.brand_for_attestation=OnePlus
 ro.product.device_for_attestation=OP5CE1L1
 ro.product.manufacturer_for_attestation=OnePlus
-ro.product.model_for_attestation=CPH2747
-ro.product.name_for_attestation=CPH2747
+ro.product.model_for_attestation=CPH2747EEA
+ro.product.name_for_attestation=CPH2747EEA
 
 # --- Build ---
 ro.build.product=OP5CE1L1
@@ -56,18 +57,78 @@ ro.build.type=user
 # --- Android 16 ---
 ro.build.version.release=16
 ro.build.version.sdk=36
-ro.build.version.security_patch=2025-06-05
+# Security patch intentionally NOT overridden — stays at system default (2026-04-01)
 
 # --- Fingerprints ---
-ro.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
-ro.system.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
-ro.vendor.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
-ro.product.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
-ro.odm.build.fingerprint=OnePlus/CPH2747/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.build.fingerprint=OnePlus/CPH2747EEA/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.system.build.fingerprint=OnePlus/CPH2747EEA/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.vendor.build.fingerprint=OnePlus/CPH2747EEA/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.product.build.fingerprint=OnePlus/CPH2747EEA/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
+ro.odm.build.fingerprint=OnePlus/CPH2747EEA/OP5CE1L1:16/AP4A.250605.001/T.250610:user/release-keys
 
-# --- OxygenOS 16 ---
-ro.vendor.oplus.version=CPH2747_16.0.0.250610
-ro.oplus.version=CPH2747_16.0.0.250610
+# --- OxygenOS 16 EU ---
+ro.vendor.oplus.version=CPH2747EEA_16.0.0.250610
+ro.oplus.version=CPH2747EEA_16.0.0.250610
 ro.oplus.regionmark=EU
 
 ro.product.characteristics=phone
+
+# ============================================================
+# Flagship Performance Tuning — SM8750 (Snapdragon 8 Elite)
+# Makes apps behave as if running on OnePlus 15 hardware
+# ============================================================
+
+# --- RAM class — report 16GB flagship tier ---
+ro.config.hw_ram_gb=16
+ro.product.mem_size_mb=16384
+ro.sf.total_ram_mb=16384
+
+# --- Dalvik/ART heap — flagship headroom ---
+dalvik.vm.heapsize=512m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=8m
+dalvik.vm.heapmaxfree=32m
+
+# --- SoC identity — SM8750 Snapdragon 8 Elite ---
+ro.soc.manufacturer=QTI
+ro.soc.model=SM8750
+ro.board.platform=taro
+
+# --- CPU/GPU perf hints ---
+ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.qti.sys.fw.bservice_limit=5
+ro.vendor.qti.sys.fw.bservice_age=5000
+persist.vendor.qti.inputopts.enable_motionpred=true
+persist.vendor.qti.inputopts.movedist=2
+
+# --- Background process allowance (flagship = more headroom) ---
+ro.config.max_starting_bg=8
+ro.sys.fw.bg_apps_limit=60
+
+# --- SurfaceFlinger / frame pipeline ---
+debug.sf.disable_backpressure=1
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+
+# --- Touch & input latency ---
+ro.input.noresample=1
+debug.input.resampling=0
+
+# --- Game/app perf mode ---
+ro.vendor.oplus.game.flowchecker.enable=1
+persist.sys.oplus.perf_mode=1
+ro.vendor.oplus.hypercooling=1
+
+# --- Quick power on ---
+ro.config.hw_quickpoweron=true
+
+# --- I/O scheduler hint ---
+sys.use_fifo_ui=1
+
+# --- ZRAM / memory compression (16GB-class behaviour) ---
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
