@@ -3,7 +3,6 @@
 # SpoofasOnePlus15
 
 **An open-source Android module that spoofs your device as OnePlus 15 EU (CPH2747EEA)**  
-Built on the Rapchick Engine · Compatible with KernelSU / SukiSU Ultra / Magisk
 
 ![Version](https://img.shields.io/badge/version-v1.1-blue)
 ![Android](https://img.shields.io/badge/android-16-green)
