@@ -47,8 +47,9 @@ Tested on OxygenOS 16 / ColorOS 16 ports · Android 16 · SM8350
 
 ## Credits
 
-- Built by [@ozyern](https://github.com/ozyern) · Rapchick Engine
+- Built by [@ozyern](https://github.com/ozyern)
 - Android modding community & testers
+- Sabrina Carpenter
 
 ## License
 
